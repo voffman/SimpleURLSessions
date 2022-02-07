@@ -15,10 +15,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let api = ApiManager()
         
-        api.getPost(urlString: placeholder, model: posts) { [self] post in
-            self.posts = post as! [Placeholder]
-            
-            for post in posts{
+        api.getPost(urlString: placeholder, model: posts) { [weak self] post in
+            self?.posts = post as! [Placeholder]
+            for post in self!.posts{
                 print(post.id)
                 print(post.title)
             }
