@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let api = ApiManager()
         
-        api.getRequest(urlString: placeholder, model: posts) { [weak self] result in
+    /*    api.getRequest(urlString: placeholder, model: posts) { [weak self] result in
             guard let self = self else { return }
 
             switch result{
@@ -29,6 +29,23 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+      */
+        api.postRequest(urlString: placeholder, body: ["Check":"Checking", "Post":"Posting"], model: posts) { [weak self] result in
+            guard let self = self else { return }
+
+            switch result{
+            case .success(_):
+                //self.posts = post as! [Placeholder]
+                for post in self.posts{
+                    print(post.id)
+                    print(post.title)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        
     }
 }
 
