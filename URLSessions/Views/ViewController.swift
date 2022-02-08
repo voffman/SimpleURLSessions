@@ -15,11 +15,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let api = ApiManager()
         
-        api.getPost(urlString: placeholder, model: posts) { [weak self] post in
-            self?.posts = post as! [Placeholder]
-            for post in self!.posts{
-                print(post.id)
-                print(post.title)
+        api.getPost(urlString: placeholder, model: posts) { [weak self] result in
+            guard let self = self else { return }
+
+            switch result{
+            case .success(let post):
+                self.posts = post as! [Placeholder]
+                for post in self.posts{
+                    print(post.id)
+                    print(post.title)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
