@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let api = ApiManager()
         
-        api.getPost(urlString: placeholder, model: posts) { [weak self] result in
+        api.getRequest(urlString: placeholder, model: posts) { [weak self] result in
             guard let self = self else { return }
 
             switch result{

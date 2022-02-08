@@ -15,7 +15,7 @@ import Foundation
 
 final class ApiManager {
     
-    func getPost<T: Decodable>(urlString: String, model: T, completion: @escaping (Result<Any?, Error>) -> () ){
+    func getRequest<T: Decodable>(urlString: String, model: T, completion: @escaping (Result<Any?, Error>) -> () ){
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url){ (data, response, error) in
