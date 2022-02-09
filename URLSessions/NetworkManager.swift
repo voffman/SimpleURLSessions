@@ -1,5 +1,5 @@
 //
-//  ApiManager.swift
+//  NetworkManager.swift
 //  URLSessions
 //
 //  Created by Владимир Свиридов on 07.02.2022.
@@ -13,7 +13,7 @@ import Foundation
  }
  */
 
-final class ApiManager {
+final class NetworkManager {
     // параметры я могу вписать в urlString
     func getRequest<T: Decodable>(urlString: String, model: T, completion: @escaping (Result<Any?, Error>) -> () ){
         guard let url = URL(string: urlString) else { return }
@@ -40,8 +40,6 @@ final class ApiManager {
             }
         }.resume()
     }
-    
-    
     
     func postRequest<T: Decodable>(urlString: String, body: [String: Any], model: T, completion: @escaping (Result<Any?, Error>) -> ()){
         guard let url = URL(string: urlString) else { return }

@@ -13,7 +13,7 @@
 		50FFC1E327B1197A00478F1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FFC1E127B1197A00478F1D /* Main.storyboard */; };
 		50FFC1E527B1197B00478F1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50FFC1E427B1197B00478F1D /* Assets.xcassets */; };
 		50FFC1E827B1197B00478F1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50FFC1E627B1197B00478F1D /* LaunchScreen.storyboard */; };
-		50FFC1F227B11A4000478F1D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FFC1F127B11A4000478F1D /* ApiManager.swift */; };
+		50FFC1F227B11A4000478F1D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FFC1F127B11A4000478F1D /* NetworkManager.swift */; };
 		50FFC1F627B1249200478F1D /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FFC1F527B1249200478F1D /* Placeholder.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		50FFC1E427B1197B00478F1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50FFC1E727B1197B00478F1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50FFC1E927B1197B00478F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50FFC1F127B11A4000478F1D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		50FFC1F127B11A4000478F1D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		50FFC1F527B1249200478F1D /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 		50FFC1DA27B1197A00478F1D /* URLSessions */ = {
 			isa = PBXGroup;
 			children = (
-				50FFC1F127B11A4000478F1D /* ApiManager.swift */,
+				50FFC1F127B11A4000478F1D /* NetworkManager.swift */,
 				50FFC1EF27B1198800478F1D /* Models */,
 				50FFC1F027B1199700478F1D /* Views */,
 				50FFC1DB27B1197A00478F1D /* AppDelegate.swift */,
@@ -160,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FFC1F227B11A4000478F1D /* ApiManager.swift in Sources */,
+				50FFC1F227B11A4000478F1D /* NetworkManager.swift in Sources */,
 				50FFC1E027B1197A00478F1D /* ViewController.swift in Sources */,
 				50FFC1DC27B1197A00478F1D /* AppDelegate.swift in Sources */,
 				50FFC1DE27B1197A00478F1D /* SceneDelegate.swift in Sources */,
