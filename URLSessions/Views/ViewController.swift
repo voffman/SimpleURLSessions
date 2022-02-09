@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let api = NetworkManager()
+        let networkManager = NetworkManager()
         
-        api.getRequest(urlString: placeholder, model: posts) { [weak self] result in
+        networkManager.getRequest(urlString: placeholder, model: posts) { [weak self] result in
                 guard let self = self else { return }
                 switch result{
                 case .success(let post):
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             }
           
 
-        api.postRequest(urlString: placeholder, body: ["Check":"Checking", "Post":"Posting"], model: posts) { [weak self] result in
+        networkManager.postRequest(urlString: placeholder, body: ["Check":"Checking", "Post":"Posting"], model: posts) { [weak self] result in
             guard let self = self else { return }
 
             switch result{
